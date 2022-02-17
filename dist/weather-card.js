@@ -168,7 +168,7 @@ class WeatherCard extends LitElement {
           style="background: none, url('${this.getWeatherIcon(
             stateObj.state.toLowerCase(),
             this.hass.states["sun.sun"]
-          )}') no-repeat; background-size: contain;"
+          )}') no-repeat; background-size: contain; image-rendering: -webkit-optimize-contrast; transform: translateZ(0);"
           >${stateObj.state}
         </span>
         ${this._config.name
