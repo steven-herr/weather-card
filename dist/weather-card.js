@@ -165,6 +165,7 @@ class WeatherCard extends LitElement {
       <div class="current ${this.numberElements > 1 ? "spacer" : ""}">
         <span
           class="icon bigger"
+          shape-rendering="geometricPrecision"
           style="background: none, url('${this.getWeatherIcon(
             stateObj.state.toLowerCase(),
             this.hass.states["sun.sun"]
