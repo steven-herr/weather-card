@@ -164,6 +164,7 @@ class WeatherCard extends LitElement {
     return html`
       <div class="current ${this.numberElements > 1 ? "spacer" : ""}">
         <span
+          width="140px" height="140px"
           class="icon bigger"
           style="background: none, url('${this.getWeatherIcon(
             stateObj.state.toLowerCase(),
