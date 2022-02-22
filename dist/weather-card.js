@@ -165,7 +165,7 @@ class WeatherCard extends LitElement {
       <div class="current ${this.numberElements > 1 ? "spacer" : ""}" style="margin-bottom:0; padding-bottom:0;">
         <img src="${this.getWeatherIcon(
             stateObj.state.toLowerCase(),
-            this.hass.states["sun.sun"])}" width="140" height="140" style="width:140px; height:140px; margin-top:-25px; margin-bottom:-25px;" />
+            this.hass.states["sun.sun"])}" width="140" height="140" style="width:140px; height:140px; margin-top:-40px; margin-bottom:-20px;" />
        
         ${this._config.name
           ? html` <span class="title"> ${this._config.name} </span> `
