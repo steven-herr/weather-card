@@ -163,15 +163,11 @@ class WeatherCard extends LitElement {
 
     return html`
       <div class="current ${this.numberElements > 1 ? "spacer" : ""}">
-        <span
-          width="140" height="140"
-          class="icon bigger"
-          style="background: none, url('${this.getWeatherIcon(
+        <img src="'${this.getWeatherIcon(
             stateObj.state.toLowerCase(),
             this.hass.states["sun.sun"]
-          )}') no-repeat; background-size: contain; transform: translateZ(0); -webkit-transform: translate(-33%, 33%) scale3d(1, 1, 1); transform: translate(-33%, 33%) scale3d(1, 1, 1);"
-          >${stateObj.state}
-        </span>
+          )}'" width="140" height="140" />
+       
         ${this._config.name
           ? html` <span class="title"> ${this._config.name} </span> `
           : ""}
