@@ -206,7 +206,7 @@ class WeatherCard extends LitElement {
         </li>
         <li>
           <ha-icon icon="mdi:weather-windy"></ha-icon> ${windDirections[
-            parseInt((stateObj.attributes.wind_bearing + 11.25) / 22.5)
+            Math.trunc(parseInt((stateObj.attributes.wind_bearing + 11.25) / 22.5))
           ]}
           ${stateObj.attributes.wind_speed}<span class="unit">
             ${this.getUnit("length")}/h
@@ -222,7 +222,7 @@ class WeatherCard extends LitElement {
         <li>
           <ha-icon icon="mdi:weather-fog"></ha-icon> ${stateObj.attributes
             .visibility}<span class="unit">
-            ${this.getUnit("length")}
+            ${Math.trunc(this.getUnit("length"))}
           </span>
         </li>
         ${next_rising
