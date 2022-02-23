@@ -280,12 +280,12 @@ class WeatherCard extends LitElement {
                   )}') no-repeat; background-size: contain"
                 ></i>
                 <div class="highTemp">
-                  ${daily.temperature}${this.getUnit("temperature")}
+                  Math.ceil(${daily.temperature}${this.getUnit("temperature")})
                 </div>
                 ${daily.templow !== undefined
                   ? html`
                       <div class="lowTemp">
-                        ${daily.templow}${this.getUnit("temperature")}
+                        Math.ceil(${daily.templow}${this.getUnit("temperature")})
                       </div>
                     `
                   : ""}
